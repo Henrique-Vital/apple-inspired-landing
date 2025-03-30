@@ -1,0 +1,53 @@
+/* Lead Form Section */
+.lead-form-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--light-gray);
+  padding: 40px 0;
+}
+
+.lead-form-section h1 {
+  color: var(--secondary-color);
+}
+
+.lead-form-section .lead {
+  color: var(--medium-gray);
+}
+
+.lead-form-logo {
+  margin-bottom: 2rem;
+}
+
+.form-floating .form-control {
+  border-radius: var(--border-radius);
+  border: 1px solid #d2d2d7;
+  padding: 1rem;
+  height: 58px;
+}
+
+.form-floating .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(0, 113, 227, 0.25);
+}
+
+.form-floating label {
+  padding: 1rem;
+}
+
+@media (max-width: 767px) {
+  .lead-form-section {
+    padding: 20px 0;
+  }
+
+  .lead-form-section h1 {
+    font-size: 2rem;
+  }
+
+  .lead-form-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+  }
+}
+

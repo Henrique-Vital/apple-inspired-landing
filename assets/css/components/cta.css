@@ -1,0 +1,76 @@
+/* CTA Section */
+.cta-section {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 100px 0;
+}
+
+.cta-section .section-title {
+  color: var(--white);
+}
+
+.cta-section .section-description {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.countdown-container {
+  margin: 40px 0;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-item span:first-child {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 5px;
+}
+
+.countdown-separator {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: -10px;
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 767px) {
+  .cta-section {
+    padding: 60px 0;
+  }
+
+  .countdown-item span:first-child {
+    font-size: 2rem;
+  }
+
+  .countdown-separator {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
+

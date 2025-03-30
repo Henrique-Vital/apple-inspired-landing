@@ -1,0 +1,16 @@
+/* Global Styles */
+@import "global/fonts.css";
+@import "global/variables.css";
+@import "global/reset.css";
+@import "global/utilities.css";
+
+/* Component Styles */
+@import "components/header.css";
+@import "components/lead-form.css";
+@import "components/hero.css";
+@import "components/about.css";
+@import "components/gallery.css";
+@import "components/testimonials.css";
+@import "components/cta.css";
+@import "components/footer.css";
+

@@ -1,14 +1,47 @@
 /* Testimonials Section */
 .testimonials-section {
   background-color: var(--white);
-  padding: 100px 0;
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Background Elements */
+.testimonials-bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(var(--light-gray) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+/* Section Header Animation */
+.testimonials-section .section-title,
+.testimonials-section .section-description {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.testimonials-section .section-title.animate,
+.testimonials-section .section-description.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Testimonials Slider Container */
 .testimonials-slider-container {
   position: relative;
   max-width: 900px;
   margin: 0 auto;
   overflow: hidden;
+  z-index: 1;
 }
 
 .testimonials-slider {
@@ -21,33 +54,76 @@
   cursor: grabbing;
 }
 
+/* Testimonial Slide */
 .testimonial-slide {
   min-width: 100%;
   padding: 0 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.testimonial-slide.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .testimonial-content {
   background-color: var(--light-gray);
-  border-radius: var(--border-radius);
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  position: relative;
 }
 
+.testimonial-content:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Quote Icon */
+.testimonial-content::before {
+  content: '"';
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--primary-color);
+  opacity: 0.2;
+  font-family: Georgia, serif;
+}
+
+/* Rating Stars */
 .testimonial-rating {
   color: #ffb900;
   font-size: 1.25rem;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 2px;
 }
 
+.star {
+  display: inline-block;
+}
+
+/* Testimonial Text */
 .testimonial-text {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
   font-style: italic;
+  line-height: 1.6;
+  color: var(--secondary-color);
+  position: relative;
+  z-index: 1;
 }
 
+/* Author Information */
 .testimonial-author {
   display: flex;
   align-items: center;
+  margin-top: 1.5rem;
 }
 
 .testimonial-avatar {
@@ -56,11 +132,24 @@
   border-radius: 50%;
   object-fit: cover;
   margin-right: 15px;
+  border: 3px solid var(--white);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal);
+}
+
+.testimonial-content:hover .testimonial-avatar {
+  transform: scale(1.1);
+}
+
+.testimonial-info {
+  flex: 1;
 }
 
 .testimonial-info h4 {
   font-size: 1.1rem;
   margin-bottom: 5px;
+  font-weight: 600;
+  color: var(--secondary-color);
 }
 
 .testimonial-info p {
@@ -68,11 +157,20 @@
   font-size: 0.9rem;
 }
 
+/* Slider Controls */
 .testimonial-controls {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 2.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.testimonial-controls.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .testimonial-prev,
@@ -83,18 +181,27 @@
   color: var(--medium-gray);
   cursor: pointer;
   padding: 0 15px;
-  transition: color var(--transition-speed);
+  transition: all var(--transition-normal);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .testimonial-prev:hover,
 .testimonial-next:hover {
   color: var(--primary-color);
+  background-color: var(--light-gray);
+  transform: scale(1.1);
 }
 
+/* Pagination Dots */
 .testimonial-pagination {
   display: flex;
   gap: 8px;
-  margin: 0 15px;
+  margin: 0 20px;
 }
 
 .pagination-dot {
@@ -103,29 +210,102 @@
   border-radius: 50%;
   background-color: var(--medium-gray);
   cursor: pointer;
-  transition: background-color var(--transition-speed);
+  transition: all var(--transition-normal);
+}
+
+.pagination-dot:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.2);
 }
 
 .pagination-dot.active {
   background-color: var(--primary-color);
+  width: 20px;
+  border-radius: 10px;
 }
 
-@media (max-width: 767px) {
+/* Responsive Styles */
+@media (max-width: 991px) {
   .testimonials-section {
-    padding: 60px 0;
+    padding: 4rem 0;
   }
 
   .testimonial-content {
-    padding: 20px;
+    padding: 2rem;
   }
 
   .testimonial-text {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .testimonials-section {
+    padding: 3rem 0;
+  }
+
+  .testimonial-content {
+    padding: 1.5rem;
+  }
+
+  .testimonial-content::before {
+    font-size: 4rem;
+    top: 10px;
+    left: 15px;
+  }
+
+  .testimonial-text {
+    font-size: 0.9375rem;
   }
 
   .testimonial-avatar {
     width: 50px;
     height: 50px;
   }
+
+  .testimonial-info h4 {
+    font-size: 1rem;
+  }
+
+  .testimonial-info p {
+    font-size: 0.8125rem;
+  }
+
+  .testimonial-prev,
+  .testimonial-next {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+}
+
+/* Dark Mode Styles */
+.dark .testimonials-section {
+  background-color: var(--dark-bg);
+}
+
+.dark .testimonials-bg-pattern {
+  background-image: radial-gradient(var(--dark-border) 1px, transparent 1px);
+}
+
+.dark .testimonial-content {
+  background-color: var(--dark-surface);
+}
+
+.dark .testimonial-text {
+  color: var(--dark-text);
+}
+
+.dark .testimonial-info h4 {
+  color: var(--dark-text);
+}
+
+.dark .testimonial-avatar {
+  border-color: var(--dark-surface);
+}
+
+.dark .testimonial-prev:hover,
+.dark .testimonial-next:hover {
+  background-color: var(--dark-surface);
 }
 

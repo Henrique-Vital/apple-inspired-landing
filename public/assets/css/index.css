@@ -1,5 +1,5 @@
 /* Global Styles */
-@import "global/fonts.css";
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Racing+Sans+One&family=Roboto:wght@300;400;500;700&display=swap");
 @import "global/variables.css";
 @import "global/reset.css";
 @import "global/utilities.css";
@@ -10,7 +10,54 @@
 @import "components/hero.css";
 @import "components/about.css";
 @import "components/gallery.css";
-@import "components/testimonials.css";
 @import "components/cta.css";
 @import "components/footer.css";
+
+/* Additional Styles for Specifications Section */
+.specs-list {
+  margin-bottom: 2rem;
+}
+
+.spec-item {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--light-gray);
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.spec-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  background-color: rgba(209, 32, 38, 0.05);
+}
+
+.spec-item h3 {
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  letter-spacing: 1px;
+}
+
+.spec-item p {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .spec-item {
+    padding: 1rem;
+  }
+
+  .spec-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .spec-item p {
+    font-size: 1rem;
+  }
+}
 

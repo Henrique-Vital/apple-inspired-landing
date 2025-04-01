@@ -1,0 +1,16 @@
+# Diretórios que não precisam de formatação
+node_modules
+dist
+build
+coverage
+
+# Configurações do servidor (caso não queira formatar)
+nginx
+.env
+
+# Arquivos específicos
+package-lock.json
+yarn.lock
+
+# Ignorar todos os arquivos dentro de uma pasta específica
+public/assets/files*

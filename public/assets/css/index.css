@@ -1,16 +1,16 @@
 /* Global Styles */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Racing+Sans+One&family=Roboto:wght@300;400;500;700&display=swap');
-@import 'global/variables.css';
-@import 'global/reset.css';
-@import 'global/utilities.css';
-@import 'global/fonts.css';
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Racing+Sans+One&family=Roboto:wght@300;400;500;700&display=swap");
+@import "global/variables.css";
+@import "global/reset.css";
+@import "global/utilities.css";
+@import "global/fonts.css";
 
 /* Component Styles */
-@import 'components/header.css';
-@import 'components/lead-form.css';
-@import 'components/hero.css';
-@import 'components/about.css';
-@import 'components/gallery.css';
-@import 'components/cta.css';
-@import 'components/footer.css';
-@import 'components/testimonials.css';
+@import "components/header.css";
+@import "components/lead-form.css";
+@import "components/hero.css";
+@import "components/about.css";
+@import "components/gallery.css";
+@import "components/cta.css";
+@import "components/footer.css";
+@import "components/testimonials.css";
